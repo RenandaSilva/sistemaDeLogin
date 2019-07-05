@@ -278,28 +278,74 @@
            
            //Envio de dados via Ajax
            //sem recarregar a página
-           $("#btnRegistroUsuario").click(function(e){
-            
-            if(document
-                    .querySelector("#formRegistro")
-                    .checkValidity()){
-                //Não deixa o formulário ser enviado    
-                e.preventDefault();
-                $.ajax({
-                    url: 'recebe.php',
-                    method: 'post',
-                    data:$('#formRegistro')
-                            .serialize()+'&action=registro',
-                    success:function(resposta){
-                        $('#alerta').show();
-                        $('#resultado').html(resposta);
-                    }
-                    
-                });
-            
-            }
-            
+           $("#btnRegistroUsuario").click(function(e){            
+                if(document
+                        .querySelector("#formRegistro")
+                        .checkValidity()){
+                    //Não deixa o formulário ser enviado    
+                    e.preventDefault();
+                    $.ajax({
+                        url: 'recebe.php',
+                        method: 'post',
+                        data:$('#formRegistro')
+                                .serialize()+'&action=registro',
+                        success:function(resposta){
+                            $('#alerta').show();
+                            $('#resultado').html(resposta);
+                        }                    
+                    });            
+                }
+                return true;
             });
+            //Fim do Ajax Registro Usuário
+            
+            //Envio de dados via Ajax
+           //Página de Login
+           $("#btnEntrar").click(function(e){            
+                if(document
+                        .querySelector("#formLogin")
+                        .checkValidity()){
+                    //Não deixa o formulário ser enviado    
+                    e.preventDefault();
+                    $.ajax({
+                        url: 'recebe.php',
+                        method: 'post',
+                        data:$('#formLogin')
+                                .serialize()+'&action=entrar',
+                        success:function(resposta){
+                            $('#alerta').show();
+                            $('#resultado').html(resposta);
+                        }                    
+                    });            
+                }
+                return true;
+            });
+            //Fim do Ajax Entrar
+            
+            
+           //Envio de dados via Ajax
+           //Página de Gerar Senha
+           $("#btnGerar").click(function(e){            
+                if(document
+                        .querySelector("#formSenha")
+                        .checkValidity()){
+                    //Não deixa o formulário ser enviado    
+                    e.preventDefault();
+                    $.ajax({
+                        url: 'recebe.php',
+                        method: 'post',
+                        data:$('#formSenha')
+                                .serialize()+'&action=gerar',
+                        success:function(resposta){
+                            $('#alerta').show();
+                            $('#resultado').html(resposta);
+                        }                    
+                    });            
+                }
+                return true;
+            });
+            //Fim do Ajax Gerar Senha
+            
            
        });
        
