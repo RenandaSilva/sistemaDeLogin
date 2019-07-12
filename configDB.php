@@ -17,3 +17,5 @@ if($conexão->connect_error){
     // só para dubug
     // echo "Conectado com sucesso!";
 }
+
+
