@@ -13,3 +13,9 @@ Mostrar e esconder formulários.
 ## aula04 - 04 de julho de 2019
 Validação com jQuery e envio de 
 dados com Ajax. ~~Recepção com PHP~~
+
+## aula05 - 08 de julho de 2019
+Cadastro de usuário no banco de dados
+
+## aula06 - 11 de julho de 2019
+Validação de sessão 
